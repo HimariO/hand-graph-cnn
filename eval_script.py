@@ -81,7 +81,10 @@ def main():
             est_pose_uv = [o.to(cpu_device) for o in est_pose_uv]
             est_pose_cam_xyz = [o.to(cpu_device) for o in est_pose_cam_xyz]
 
-        results_pose_cam_xyz.update({img_id.item(): result for img_id, result in zip(image_ids, est_pose_cam_xyz)})
+        results_pose_cam_xyz.update({
+            img_id.item(): result
+            for img_id, result in zip(image_ids, est_pose_cam_xyz)
+        })
 
         if i % cfg.EVAL.PRINT_FREQ == 0:
             # 4. evaluate pose estimation

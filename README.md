@@ -23,6 +23,7 @@ If you find our work useful in your research, please consider citing:
 2. Clone this repo, and we'll call the directory that you cloned as ${HAND_ROOT}.
 3. Install dependencies:
     ```
+    sudo apt install libosmesa6-dev build-essential libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev
     pip install -r requirements.txt
     ```
 
